@@ -72,7 +72,7 @@ const data = {
     twitter: chalk.gray("https://twitter.com/") + chalk.cyan("LokeshGaddam20"),
     github: chalk.gray("https://github.com/") + chalk.green("lokeshgaddam20"),
     linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("gaddamlokesh"),
-    npx: chalk.red("npx") + " " + chalk.white("lokesh"),
+    npx: chalk.red("npx") + " " + chalk.white("lokeshgaddam20"),
 
     labelAcademics: chalk.white.bold("  Academics:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
