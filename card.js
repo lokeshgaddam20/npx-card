@@ -37,9 +37,9 @@ const questions = [
                         text: ' Downloading Resume',
                         spinner: cliSpinners.material,
                     }).start();
-                    let pipe = request('https://anmolsingh.me/api/resume').pipe(fs.createWriteStream('./anmol-resume.html'));
+                    let pipe = request('https://drive.google.com/uc?export=download&id=1X31D6vqkItXjeASreDH3HVOL4dA6iexz').pipe(fs.createWriteStream('./lokesh-resume.pdf'));
                     pipe.on("finish", function () {
-                        let downloadPath = path.join(process.cwd(), 'lokesh-resume.html')
+                        let downloadPath = path.join(process.cwd(), 'lokesh-resume.pdf')
                         console.log(`\nResume Downloaded at ${downloadPath} \n`);
                         open(downloadPath)
                         loader.stop();
@@ -56,7 +56,7 @@ const questions = [
             {
                 name: "Just quit.",
                 value: () => {
-                    console.log("Buhbyee...\n");
+                    console.log("BuhByee.\n");
                 }
             }
         ]
@@ -64,9 +64,9 @@ const questions = [
 ];
 
 const data = {
-    name: chalk.bold.green("                 Lokesh Gaddam"),
-    handle: chalk.white("@anmol098"),
-    academics: `${chalk.white("Bachelors in Computer Science and Engineering")} ${chalk
+    name: chalk.bold.green("                    Lokesh Gaddam"),
+    handle: chalk.white("@lokesh_g"),
+    academics: `${chalk.white("Bacherlors in Computer Science,")} ${chalk
         .hex("#2b82b2")
         .bold("CVRCOE")}`,
     twitter: chalk.gray("https://twitter.com/") + chalk.cyan("LokeshGaddam20"),
@@ -74,9 +74,9 @@ const data = {
     linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("gaddamlokesh"),
     npx: chalk.red("npx") + " " + chalk.white("lokesh"),
 
-    labelWork: chalk.white.bold("       Academics:"),
-    labelTwitter: chalk.white.bold("    Twitter:"),
+    labelAcademics: chalk.white.bold("  Academics:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
+    labelTwitter: chalk.white.bold("    Twitter:"),
     labelLinkedIn: chalk.white.bold("   LinkedIn:"),
     labelCard: chalk.white.bold("       Card:")
 };
@@ -85,24 +85,23 @@ const me = boxen(
     [
         `${data.name}`,
         ``,
-        `${data.labelWork}  ${data.work}`,
+        `${data.labelAcademics}  ${data.academics}`,
         ``,
-        `${data.labelTwitter}  ${data.twitter}`,
         `${data.labelGitHub}  ${data.github}`,
+        `${data.labelTwitter}  ${data.twitter}`,
         `${data.labelLinkedIn}  ${data.linkedin}`,
-        `${data.labelWeb}  ${data.web}`,
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,
         `${chalk.italic(
-            "I am currently looking for new opportunities,"
+            "I am currently looking for new opportunities."
         )}`,
-        `${chalk.italic("my inbox is always open. Whether you have a")}`,
+        `${chalk.italic("my inbox is always open. Whether you have a question")}`,
         `${chalk.italic(
-            "question or just want to say hi, I will try "
+            "or just want to say hi, Just drop me a mail."
         )}`,
         `${chalk.italic(
-            "to get back to you!"
+            "I'll get back to you!"
         )}`
     ].join("\n"),
     {
@@ -110,7 +109,7 @@ const me = boxen(
         float: 'center',
         padding: 1,
         borderStyle: "single",
-        borderColor: "green"
+        borderColor: "green",
     }
 );
 
