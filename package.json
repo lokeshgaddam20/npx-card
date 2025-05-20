@@ -1,7 +1,7 @@
 {
   "name": "lokeshgaddam20",
-  "version": "1.0.1",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Lokesh Gaddam's digital business card",
   "main": "card.js",
   "bin": {
     "lokesh": "./card.js"
